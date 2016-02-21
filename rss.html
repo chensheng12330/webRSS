@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            Welcome to nginx!
+        </title>
+        <meta charset="utf-8">
+        <link href="http://csdnimg.cn/public/favicon.ico" rel="GEEK ICON">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <link href="http://7xr3yn.com1.z0.glb.clouddn.com/stlye.css"
+        media="screen" type="text/css" rel="stylesheet">
+    </head>
+
+
+
+
+    <body>
+      <h1></h1>
+      <br>
+      <br>
+      <br>
+    <div class="container">
+
+    <script type="text/javascript" src="rsslist.js"></script>
+    <script type="text/javascript">
+
+/*
+定义基参数.
+*/
+    var baseURL="http://c.m.163.com/nc/article/list/";
+    var imgBaseURL="http://timge7.126.net/image?w=68&h=68&quality=75&url=http%3A%2F%2Fimg2.cache.netease.com%2Fm%2Fnewsapp%2Ftopic_icons%2F";
+    var listCout=20;
+
+    for(var i=0; i<jsonObject.length; i++)
+    {
+        var tmpObj = jsonObject[i];
+
+        var srcurl,imgurl;
+        srcurl = baseURL+tmpObj.tid+"/0-"+listCout+".html";
+        imgurl = imgBaseURL+tmpObj.tid+".png&gif=1";
+
+        var element = "<div class='grid-4 floated-thumb'>" +
+	"<div class='post-thumb'><img width='60' height='60' alt=''src='"+imgurl+"'></div>"
+  +
+  "<div class='post-meta'><p><a href='"+srcurl+"' class='meta-title' target='_blank'>"+ tmpObj.tname +"</a><p id='alias'>"+ tmpObj.alias +
+  "</p></p></div>"
+  +
+  "</div>";
+        document.write(element);
+    }
+      </script>
+
+
+    </div>
+    </body>
+
+</html>
